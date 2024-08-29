@@ -43,13 +43,13 @@ def generar_vehiculos(tiempo_actual, num_vehiculos):
         llegada = tiempo_actual + np.random.uniform(0, tiempo_llegada_vehiculos)
         vehiculos.append({'tiempo_llegada': llegada, 'estado': 'espera', 'origen': origen, 'destino': destino})
 
-# Inicialización de la simulación
-generar_vehiculos(0, num_vehiculos_inicial)
 
-# Almacenar datos para la visualización
+# Variables para almacenar datos importantes de la simulación
 informe = {  }
 tiempos = []
 
+# Inicialización de la simulación
+generar_vehiculos(0, num_vehiculos_inicial)
 # Simulación
 while tiempo_actual < tiempo_simulacion:
     # Actualizar el estado de los semáforos
