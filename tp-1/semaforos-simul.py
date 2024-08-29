@@ -48,7 +48,6 @@ generar_vehiculos(0, num_vehiculos_inicial)
 
 # Almacenar datos para la visualización
 tiempos = []
-cant_vehiculos_circulando = []
 
 # Simulación
 while tiempo_actual < tiempo_simulacion:
@@ -68,9 +67,7 @@ while tiempo_actual < tiempo_simulacion:
 
     
     # Contar vehículos en circulación
-    num_vehiculos_circulando = sum(1 for v in vehiculos if v['estado'] == 'circula')
     tiempos.append(tiempo_actual)
-    cant_vehiculos_circulando.append(num_vehiculos_circulando)
     
     # Incrementar el tiempo
     tiempo_actual += 1
