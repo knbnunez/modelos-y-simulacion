@@ -47,6 +47,7 @@ def generar_vehiculos(tiempo_actual, num_vehiculos):
 generar_vehiculos(0, num_vehiculos_inicial)
 
 # Almacenar datos para la visualización
+informe = {  }
 tiempos = []
 
 # Simulación
@@ -67,7 +68,7 @@ while tiempo_actual < tiempo_simulacion:
 
     
     # Contar vehículos en circulación
-    tiempos.append(tiempo_actual)
+    tiempos.append(tiempo_actual) # tiempo_actual, informe
     
     # Incrementar el tiempo
     tiempo_actual += 1
