@@ -21,10 +21,10 @@ A   = float(input("Amplitud de la señal A: "))
 f0  = float(input("Frecuencia de la señal f0 (ciclos por segundo): "))
 θ   = float(input("Desplazamiento del ciclo θ: "))
 α   = float(input("Tasa de cambio α: "))
-t   = int(input("Tiempo final t (en segundos): "))
+t   = float(input("Tiempo final t (en segundos): "))
 
-# Definir el intervalo de tiempo (por ejemplo, de 0 a t en 1000 puntos)
-t_values = np.linspace(0, t, 1000)  # Genera 1000 puntos de tiempo entre 0 y t
+# Definir el intervalo de tiempo
+t_values = np.linspace(0, t, 1000)  # Genera un arreglo de 1000 posiciones con valores entre 0 y t
 
 # Calcular el valor de la señal amortiguada para cada valor de tiempo
 x_values = [senal_amortiguada(A, f0, θ, α, ti) for ti in t_values]
