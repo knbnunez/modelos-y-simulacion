@@ -24,8 +24,7 @@ D   = float(input("Duración del pulso D (en segundos): "))
 t   = float(input("Tiempo final de la señal t (en segundos): "))
 
 cant_puntos = 1000 # se podría consultar por consola
-# Definir el intervalo de tiempo (por ejemplo, de 0 a t en 1000 puntos)
-t_values = np.linspace(0, t, cant_puntos)  # Genera n puntos de tiempo entre 0 y t
+t_values = np.linspace(0, t, cant_puntos)  # Genera un arreglo de 1000 posiciones con valores entre 0 y t
 
 # Calcular el valor de la señal Pulso para cada valor de tiempo
 x_values = [pulso(A, ti, t0, D) for ti in t_values]
