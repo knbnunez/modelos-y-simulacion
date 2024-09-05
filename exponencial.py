@@ -2,6 +2,7 @@
 
 import matplotlib.pyplot as plt
 from math import exp
+import numpy as np
 
 '''
 Explicación de términos:
@@ -25,11 +26,11 @@ print("\n --- Función Seno --- \n")
 print("\nIngrese por favor:")
 A   = float(input("Amplitud inicial A: "))
 α   = float(input("Tasa de crecimiento o decrecimiento α: "))
-t0  = int(input("Instante de tiempo t0: "))
-t   = int(input("Tiempo final en segundos t: "))
+t0  = float(input("Instante de tiempo t0: "))
+t   = float(input("Tiempo final en segundos t: "))
 
 # Intervalo de tiempo de la función
-t_values = [i for i in range(t)]
+t_values = np.linspace(0, t, 1000)  # Genera un arreglo de 1000 posiciones con valores entre 0 y t
 
 # Calcular la señal exponencial para cada instante ti
 x_values = [exponencial(A, α, ti, t0) for ti in t_values]
